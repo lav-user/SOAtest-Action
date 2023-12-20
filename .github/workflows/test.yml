@@ -27,7 +27,7 @@ jobs:
         run: |
           soatestcli -import $GITHUB_WORKSPACE/TestAssets
           #soatestcli -data D:\Jenkins_Integrations -resource /TestAssets/ -config "user://Example Configuration" -settings D:\Jenkins_Integrations\localsettings.properties
-          soatestcli -data $GITHUB_WORKSPACE -resource /TestAssets/ -config "user://Example Configuration" -settings ./localsettings.properties
+          soatestcli -data $GITHUB_WORKSPACE -resource /TestAssets/ -config "user://Example Configuration" -settings ${{ github.workspace }}/localsettings.properties
           
           
      
