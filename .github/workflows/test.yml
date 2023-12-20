@@ -27,16 +27,4 @@ jobs:
         run: |
           soatestcli -data D:\Jenkins_Integrations -resource /TestAssets/ -config "user://Example Configuration" -settings D:\Jenkins_Integrations\localsettings.properties
           
-      - name: Upload results (SARIF)
-        if: always()
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-            sarif_file: reports/report.sarif
-            
-       - name: Archive reports
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: SOAtest reports
-          path: reports/*.*
-
+     
