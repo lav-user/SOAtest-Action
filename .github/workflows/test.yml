@@ -25,11 +25,7 @@ jobs:
       
       - name: Run SOATest CLI 
         run: |
-          #soatestcli -import $GITHUB_WORKSPACE/TestAssets
+          soatestcli -import $GITHUB_WORKSPACE/TestAssets
           #soatestcli -data D:\Jenkins_Integrations -resource /TestAssets/ -config "user://Example Configuration" -settings D:\Jenkins_Integrations\localsettings.properties
-          #soatestcli -data $GITHUB_WORKSPACE -resource /TestAssets/ -config "user://Example Configuration" -settings ${{ github.workspace }}/localsettings.properties
-          soatestcli -import ${PWD}/TestAssets/TestParabank
-          soatestcli -data ${PWD} -resource /TestAssets/TestParabank/Parabank_APITests.tst -config "user://Example Configuration" -settings ${PWD}/localsettings.properties
-          
-          
-     
+          soatestcli -data $GITHUB_WORKSPACE -resource /TestAssets/TestParabank/ -config "user://Example Configuration" -settings ${{ github.workspace }}/localsettings.properties
+         
